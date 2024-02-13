@@ -1,0 +1,10 @@
+/* universal selector (selects all elements) */
+* {
+  
+}
+html {
+  font-size: 11px;
+}
+p + p {
+  border-color: yellow;
+}
