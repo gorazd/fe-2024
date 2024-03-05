@@ -1,0 +1,40 @@
+/* 
+  POSITIONING 
+*/
+
+/* Relative position */
+
+/* Absolute position */
+
+/* Fixed position */
+.top-bar {
+  /* overwrite the default user agent stylesheet margin */
+  margin: 0;
+  /* positioning */
+  position: fixed;
+  /* anchor to the top viewport border */
+  top: 0;
+  /* anchor to the left viewport border */
+  left: 0;
+  /* force the width to the whole screen width */
+  width: 100%;
+
+  text-align: center;
+  background-color: hotpink;
+}
+
+.top-bar-link {
+  /* to be able to make the clickable area bigger */
+  display: block;
+  padding: 1em 0;
+
+  color: white;
+  text-decoration: none;
+
+  transition: all 100ms ease-in;
+}
+
+.top-bar-link:hover {
+  background-color: aliceblue;
+  color: hotpink;
+}
