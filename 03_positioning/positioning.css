@@ -3,8 +3,34 @@
 */
 
 /* Relative position */
+article {
+  /* we are not adding the top, right, bottom or left properties so, */
+  /* the element remains in the flow */
+  /* it acts as the container if a child is absolutely positioned */
+  position: relative;
+}
 
 /* Absolute position */
+ul {
+  /* changing the display to inline-block will prevent the element to try and occupy 100% of its parent */
+  display: inline-block;
+  padding: 1rem;
+
+  /* declaring the position absolute, the element is taken out of the flow */
+  position: absolute;
+  /* let's put it into the top right corner */
+  /* since we gave position to the <article> it will align to its top, right corner (otherwise it would to the bodys) */
+  top: 1rem;
+  right: 1rem;
+
+  /* remove the list styles */
+  list-style: none;
+
+  background-color: beige;
+  /* rounded corners */
+  border-radius: 1rem;
+}
+
 
 /* Fixed position */
 .top-bar {
@@ -18,6 +44,8 @@
   left: 0;
   /* force the width to the whole screen width */
   width: 100%;
+  /* bring it abouve other layers */
+  z-index: 1;
 
   text-align: center;
   background-color: hotpink;
