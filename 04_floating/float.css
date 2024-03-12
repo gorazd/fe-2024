@@ -1,0 +1,89 @@
+/* 
+  POSITIONING 
+*/
+
+/* Relative position */
+article {
+  /* we are not adding the top, right, bottom or left properties so, */
+  /* the element remains in the flow */
+  /* it acts as the container if a child is absolutely positioned */
+  position: relative;
+  border: 10px solid yellow;
+  /* to clear the previous floats */
+  overflow: hidden;
+  /* or */
+  clear: left;
+}
+
+img {
+  float: right
+}
+
+.badge {
+  display: inline-block;
+  width: 5em;
+  height: 5em;
+  line-height: 5em;
+  font-size: 2em;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  background-color: blue;
+  border-radius: 50%;
+  box-shadow: 2px 2px 10px red;
+  text-shadow: 2px 2px 10px black;
+}
+
+/* Absolute position */
+ul {
+  /* changing the display to inline-block will prevent the element to try and occupy 100% of its parent */
+  display: inline-block;
+  padding: 10rem 1rem;
+
+  /* FLOAT */
+  float: left;
+  margin-right: 1rem;
+
+  /* remove the list styles */
+  list-style: none;
+
+  background-color: beige;
+  /* rounded corners */
+  border-radius: 1rem;
+}
+
+
+/* Fixed position */
+.top-bar {
+  /* overwrite the default user agent stylesheet margin */
+  margin: 0;
+  /* positioning */
+  position: fixed;
+  /* anchor to the top viewport border */
+  top: 0;
+  /* anchor to the left viewport border */
+  left: 0;
+  /* force the width to the whole screen width */
+  width: 100%;
+  /* bring it abouve other layers */
+  z-index: 1;
+
+  text-align: center;
+  background-color: hotpink;
+}
+
+.top-bar-link {
+  /* to be able to make the clickable area bigger */
+  display: block;
+  padding: 1em 0;
+
+  color: white;
+  text-decoration: none;
+
+  transition: all 100ms ease-in;
+}
+
+.top-bar-link:hover {
+  background-color: aliceblue;
+  color: hotpink;
+}
