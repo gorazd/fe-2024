@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 125%;
+}
+
+body {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+  border: 20px solid pink;
+}
+
+li {
+  border: 2px solid blue;
+}
+
+/* Apply the display:flex property to the container */
+.flex {
+  display: flex;
+  /* This element becomes a flex container */
+  /* All its' direct decendants flex items */
+}
