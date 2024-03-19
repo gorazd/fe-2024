@@ -26,3 +26,46 @@ li {
   /* This element becomes a flex container */
   /* All its' direct decendants flex items */
 }
+
+.flex-special {
+  min-height: 50vh;
+
+  justify-content: space-evenly;
+  align-items: end;
+  align-content:center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.flex-special-item {
+  background-color: yellow;
+}
+
+li:nth-child(1) {
+  background-color: red;
+}
+
+li:first-of-type {
+  background-color: blue;
+}
+
+li:last-of-type {
+  background-color: green;
+}
+
+li:first-child {
+  background-color: pink;
+}
+
+li {
+  background-color: hotpink;
+}
+
+.specific {
+  background-color: lime;
+}
+
+li.specific {
+  background-color: hotpink;
+}
