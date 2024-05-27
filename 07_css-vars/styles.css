@@ -1,0 +1,83 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 200%;
+
+  /* CSS variables declared at the ROOT level to be available in all the elements */
+  --textColor: #111;
+  --backgroundColor: yellow;
+
+  --myBorder: 1px solid red;
+  --myBorderColor: purple;
+  --myBorderStyle: dashed;
+}
+
+html {
+  /* When using the variable, use this syntax var(--variable) */
+  color: var(--textColor);
+  background-color: var(--backgroundColor);
+}
+
+@media (max-width: 600px) {
+  html {
+    color: var(--backgroundColor);
+    background-color: var(--textColor);
+  }
+}
+
+body {
+  margin: 0;
+}
+
+h1 {
+  border-top: var(--myBorder);
+  border-bottom: 5px var(--myBorderStyle) var(--myBorderColor);
+}
+
+section:nth-child(odd) {
+  background-color: greenyellow;
+}
+
+.gradient-background {
+  background-color: red;
+  color: white;
+  /* gradients */
+  background-image: radial-gradient(circle at 100%, #333, #333 50%, #eee 75%, #333 75%);
+}
+
+.wrapper {
+  padding: 100px 0;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+ 
+@media (max-width: 1220px) {
+  .wrapper {
+    padding: 0 40px;
+  }
+}
+ 
+@media (max-width: 720px) {
+  .wrapper {
+    padding: 0 20px;
+  }
+}
+footer p {
+  font-weight: 900;
+  color: white;
+
+  text-shadow: 2px 2px 10px red;
+}
+
+.circle {
+  width: 200px;
+  aspect-ratio: 1 / 1;
+  
+  background-image: radial-gradient(#fff, #ddd);
+  border-radius: 50%;
+
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
