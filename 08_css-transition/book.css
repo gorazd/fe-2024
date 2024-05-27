@@ -7,9 +7,11 @@ html {
 }
 
 .book {
+  display: inline-block;
+  overflow: hidden;
+  cursor:crosshair;
   width: 40px;
   padding: 10px 20px 10px 20px;
-  display: inline-block;
 
 
   background-color: black;
@@ -18,13 +20,18 @@ html {
   text-decoration: none;
   
   border-radius: 20px;
-  box-shadow: 2px 2px 20px black;
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, .5);
 
   background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgZmlsbD0iI2ZmZiIgY2xhc3M9ImJpIGJpLWJvb2ttYXJrLWZpbGwiIHZpZXdCb3g9IjAgMCAxNiAxNiI+CiAgPHBhdGggZD0iTTIgMnYxMy41YS41LjUgMCAwIDAgLjc0LjQzOUw4IDEzLjA2OWw1LjI2IDIuODdBLjUuNSAwIDAgMCAxNCAxNS41VjJhMiAyIDAgMCAwLTItMkg0YTIgMiAwIDAgMC0yIDIiLz4KPC9zdmc+);
   background-repeat: no-repeat;
   background-position: 12px center;
 
   transition: all 150ms ease;
+}
+
+.book:hover {
+  width: 100px;
+  box-shadow: 2px 10px 20px rgba(0, 0, 0, .5);
 }
 
 .book em {
@@ -35,18 +42,15 @@ html {
   
   opacity: 0;
   transform: translateY(20px);
-}
 
-
-.book:hover {
-  width: 100px;
-  box-shadow: 2px 20px 20px rgba(0, 0, 0, 0.154);
+  transition: transform 250ms ease 20ms, 
+              opacity 50ms ease 80ms;
 }
 
 .book:hover em {
   transform: translateY(0);
   opacity: 1;
 
-  transition: transform 250ms ease, 
-              opacity 200ms ease 100ms;
+  transition: transform 250ms ease 50ms, 
+              opacity 150ms ease 100ms;
 }
