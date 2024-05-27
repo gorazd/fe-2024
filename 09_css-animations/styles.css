@@ -16,7 +16,9 @@ html {
   animation-fill-mode: backwards;
   animation-timing-function: steps(30);
 }
-
+.box:hover {
+  animation-play-state: paused;
+}
 /* CSS animation */
 /* starts with @keyframes and a name you choose */
 @keyframes changeColors {
