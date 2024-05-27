@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-size: 125%; /* 16px becomes 20px */ 
+}
+
+p {
+  font-size: 2rem;
+  color: pink;
+}
+
+/* focus color */
+a:focus-visible {
+  outline-color: pink;
+} 
+
+/* CSS transitions */
+.link {
+  background-color: yellow;
+
+  transition-property: background-color;
+  transition-duration: .3s;
+  transition-timing-function: ease-in;
+  transition-delay: 0;
+  /* shorthand */
+  transition: background-color 300ms ease-in 0;
+}
+/* only apply the rules when a device has a hovering capability */
+@media ( hover: hover) {
+  .link:hover {
+    background-color: transparent;
+
+    /* overwriting the transition duration */
+    transition-duration: 50ms;
+  }
+
+  a {
+    outline: 1px solid red;
+    display: inline-block;
+    transform-origin: top left;
+    transform: scale(1.2) rotate(45deg);
+  }
+}
